@@ -1,17 +1,21 @@
-#!bin/bash
-# be usre to have jupyter in your system
-# to install miniconda (change upon ur os)
+# install miniconda in any directory of your choice
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+cd -/Downloads
+curl -LO https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 
-# close current session after completion, new terminal
+# say yes to everything and anything
 
-source ~/.bashrc   #activates conda
+# fire conda up
 
-#create conda env and install cling
+source -/.bashrc
 
-conda create -n cling_env -c conda-forge xeus-cling notebook jupyterlab
+#get ceus-cling
+
+conda create -n cling_env -c conda-forge xeus-cling notebook jupyterlab -y
+
+# activate conda cling
+
 conda activate cling_env
 
-# launch jupyter labs, there inder NEW FILES you will come across the thing you had been hopping for, so not run heavy c codes that surpass the base C9/C11. 
+# run jupyter notebook
